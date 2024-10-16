@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.range-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider {
+    position: relative;
+    width: 250px;
+}
+
+.slider__track,
+.slider__range,
+.slider__left-value,
+.slider__right-value,
+.slider__bottom_left-value,
+.slider__bottom_right-value {
+    position: absolute;
+}
+
+.slider__track,
+.slider__range {
+    border-radius: 3px;
+    height: 5px;
+}
+
+.slider__track {
+    background-color: #292929;
+    width: 100%;
+    z-index: 1;
+}
+
+.slider__range {
+    background-color: #292929;
+    z-index: 2;
+}
+
+.slider__left-value,
+.slider__right-value {
+    color: #161717;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 6px 10px;
+    background: #FFFFFF;
+    bottom: 16px;
+}
+
+.slider__bottom_left-value,
+.slider__bottom_right-value {
+    color: #828A93;
+    font-size: 10px;
+    top: 16px;
+}
+
+.slider__left-value, .slider__bottom_left-value {
+    left: 0;
+}
+
+.slider__right-value, .slider__bottom_right-value {
+    right: 0;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 200px;
+    outline: none;
+}
+
+.thumb--zindex-3 {
+    z-index: 3;
+}
+
+.thumb--zindex-4 {
+    z-index: 4;
+}
+
+.thumb--zindex-5 {
+    z-index: 5;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+    background-color: #292929;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
+
+.thumb::-webkit-slider-thumb::before {
+    content: "d";
+    display: block;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #292929;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+    background-color: #292929;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
+
+.form-radio {
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 2px solid #484848;
+    border-radius: .375rem;
+}
+
+.form-radio:checked {
+    background: #484848;
+    border-color: #484848;
+}
+
+.is-sticky {
+    position: sticky;
+    top: 40px;
+    right: 96px;
+}
+
+.gradient-border {
+    border: 1px solid;
+    border-image: linear-gradient(267.79deg, #11CB79 42.5%, #11A692 67.51%, #002366 99.18%) 1;
+    border-image-slice: 1;
+    border-radius: 16px;
+    background-clip: border-box;
+    background-color: white;
+}
